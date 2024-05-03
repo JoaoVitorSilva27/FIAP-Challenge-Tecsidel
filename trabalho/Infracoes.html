@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,13 @@
   <link rel="stylesheet" href="src/style.css">
   <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
 
+  <style>
+    .table-header-cell.placa {
+      white-space: nowrap;
+    }
+  </style>
 </head>
+
 <body>
   <div class="container-fluid">
     <div class="row">
@@ -20,44 +27,96 @@
           <div class="profile-info">
             <div class="profile-picture"></div>
             <span class="profile-name">User</span>
-        </div>
+          </div>
         </nav>
         <div class="sidebar">
           <img src="src/img/Logo-Eysa.png" class="Logo">
 
-            <a href="Dashboard.html" class="sidebar-item">
-              <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
+          <a href="Dashboard.html" class="sidebar-item">
+            <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
 
-            <a href="CctvList.html" class="sidebar-item">
-              <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
+          <a href="CctvList.html" class="sidebar-item">
+            <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
 
-            <a href="index.html"" class="sidebar-item">
-              <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
+          <a href="index.html"" class=" sidebar-item">
+            <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
 
-            <a href="Suporte.html" class="sidebar-item">
-              <i class="fa-solid fa-headset px-2"></i>Suporte</a>
-            
-            <a href="CtAlertas.html" class="sidebar-item">
-              <i class="fa-solid fa-bell px-2"></i>Central de alertas</a>
+          <a href="Suporte.html" class="sidebar-item">
+            <i class="fa-solid fa-headset px-2"></i>Suporte</a>
 
-            <a href="#" class="sidebar-item selected">
-              <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
+          <a href="CtAlertas.html" class="sidebar-item">
+            <i class="fa-solid fa-bell px-2"></i>Central de alertas</a>
 
-            <a href="Veiculos.html" class="sidebar-item">
-              <i class="fa-solid fa-car px-2"></i>Veiculos</a>
+          <a href="#" class="sidebar-item selected">
+            <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
 
-            <a href="Fluxo.html" class="sidebar-item">
-              <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
-          </div>
+          <a href="Veiculos.html" class="sidebar-item">
+            <i class="fa-solid fa-car px-2"></i>Veiculos</a>
+
+          <a href="Fluxo.html" class="sidebar-item">
+            <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
+        </div>
 
         <div class="dark-section">
           <i class="fa-solid fa-chevron-left" style="color: white;"></i>
         </div>
       </div>
-      <div class="col-9">
-        
+      <div class="col-10">
+        <h2>Infrações</h2>
+        Obs:Caso queria ver mais detalhes ou reportar ao detran, clique no menu ao final da Infração ( <i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i> )
+
+        <table class="table">
+          <thead class="table-header">
+            <tr>
+              <th class="table-header-cell">ID</th>
+              <th class="table-header-cell placa">Placa do veiculo</th>
+              <th class="table-header-cell placa">Tipo de Infração</th>
+              <th class="table-header-cell placa">Gravidade</th>
+              <th class="table-header-cell placa">Imagens capturadas do veiculo</th>
+              <th></th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>NYK7C15</td>
+              <td>Excesso de velocidade</td>
+              <td>Grave</td>
+              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i>
+              </a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>MIA3H40</td>
+              <td>Usar luz alta dos faróis em via com iluminação pública</td>
+              <td>Leve</td>
+              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>GSW5C30</td>
+              <td>Conduzir veículo com defeito de iluminação, sinalização ou lâmpadas queimadas</td>
+              <td>Média</td>
+              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>LAL6J23</td>
+              <td>Rodizio</td>
+              <td>Média</td>
+              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
     </div>
   </div>
 </body>
+
 </html>
