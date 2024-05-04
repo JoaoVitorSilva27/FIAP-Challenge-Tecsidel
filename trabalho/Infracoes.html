@@ -63,7 +63,30 @@
       </div>
       <div class="col-10">
         <h2>Infrações</h2>
-        Obs:Caso queria ver mais detalhes ou reportar ao detran, clique no menu ao final da Infração ( <i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i> )
+        Obs:Caso queria ver mais detalhes ou reportar ao detran, clique no menu ao final da Infração ( <i
+          class="fa-solid fa-ellipsis-vertical" style="color: black;"></i> ) <br>
+
+        <div class="px-2 pt-3 pb-3">
+          <i class="fa-solid fa-filter"></i> Filtrar:
+          <select class="mr-2">
+            <option>Tipo de Infração</option>
+            <option>Gravidade</option>
+          </select>
+
+          <i class="fa-solid fa-arrow-up-wide-short"></i> Ordem:
+          <select class="mr-5">
+            <option>Crescente</option>
+            <option>Decrescente</option>
+          </select>
+
+          <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> Buscar:
+          <input type="text" placeholder="Digite aqui">
+          <select class="mr-3">
+            <option>ID</option>
+            <option>Placa</option>
+          </select>
+          <button class="btn btn-primary btn-create">Aplicar</button>
+        </div>
 
         <table class="table">
           <thead class="table-header">
@@ -76,7 +99,7 @@
               <th></th>
             </tr>
           </thead>
-          
+
           <tbody>
             <tr>
               <td>1</td>
@@ -85,7 +108,7 @@
               <td>Grave</td>
               <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
               <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i>
-              </a></td>
+                </a></td>
             </tr>
             <tr>
               <td>2</td>
