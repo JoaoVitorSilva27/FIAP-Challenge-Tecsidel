@@ -14,6 +14,54 @@
     .table-header-cell.placa {
       white-space: nowrap;
     }
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .dark-section {
+        display: none;
+      }
+
+      .bg-light {
+        margin-left: 0;
+      }
+
+      .col {
+        flex-basis: auto;
+      }
+
+      .col-10 {
+        width: 80%;
+      }
+
+      .navbar {
+        width: 90% ;
+        left: 0;
+      }
+
+      .profile-info {
+        margin-right: 20px;
+        padding-right: 10%;
+      }
+
+      .row {
+        margin-right: -25px;
+      }
+
+      *,
+      ::after,
+      ::before {
+        box-sizing: content-box;
+      }
+
+    }
+
+    @media (min-width: 769px) {
+      .iconebar {
+        display: none;
+      }
+    }
   </style>
 
 </head>
@@ -22,6 +70,7 @@
     <div class="row">
       <div class="col">
         <nav class="navbar navbar-light bg-light">
+          <i class="fa-solid fa-bars iconebar"></i>
           <span class="navbar-brand mb-0 h1">CCTV List</span>
           <div class="profile-info">
             <div class="profile-picture"></div>
