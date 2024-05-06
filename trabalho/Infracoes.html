@@ -61,83 +61,80 @@
           <i class="fa-solid fa-chevron-left" style="color: white;"></i>
         </div>
       </div>
-      <div class="col-10">
+      <div class="col-10 table-responsive">
         <h2>Infrações</h2>
-        Obs:Caso queria ver mais detalhes ou reportar ao detran, clique no menu ao final da Infração ( <i
-          class="fa-solid fa-ellipsis-vertical" style="color: black;"></i> ) <br>
-
-        <div class="px-2 pt-3 pb-3">
-            <i class="fa-solid fa-arrow-up-wide-short"></i>Ordenar por:
-          <select class="mr-2">
-            <option>Tipo de Infração</option>
-            <option>Gravidade</option>
-          </select>
-
-          Ordem:
-          <select class="mr-5">
-            <option>Crescente</option>
-            <option>Decrescente</option>
-          </select>
-
-          <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> Buscar:
-          <input type="text" placeholder="Digite aqui">
-          <select class="mr-3">
-            <option>ID</option>
-            <option>Placa</option>
-          </select>
-          <button class="btn btn-primary btn-create">Aplicar</button>
+        <p>Obs: Caso queira ver mais detalhes ou reportar ao Detran, clique no menu ao final da Infração (<i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i>)</p>
+    
+        <div class="px-2 pt-2 pb-2">
+            <span><i class="fa-solid fa-arrow-up-wide-short"></i> Ordenar por:</span>
+            <select class="mr-2">
+                <option>Tipo de Infração</option>
+                <option>Gravidade</option>
+            </select>
+            <span>Ordem:</span>
+            <select class="mr-5">
+                <option>Crescente</option>
+                <option>Decrescente</option>
+            </select>
+    
+            <span><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> Buscar:</span>
+            <input type="text" placeholder="Digite aqui">
+            <select class="mr-3">
+                <option>ID</option>
+                <option>Placa</option>
+            </select>
+            <button class="btn btn-primary btn-create">Aplicar</button>
         </div>
-
+    
         <table class="table">
-          <thead class="table-header">
-            <tr>
-              <th class="table-header-cell">ID</th>
-              <th class="table-header-cell placa">Placa do veiculo</th>
-              <th class="table-header-cell placa">Tipo de Infração</th>
-              <th class="table-header-cell placa">Gravidade</th>
-              <th class="table-header-cell placa">Imagens capturadas do veiculo</th>
-              <th></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>NYK7C15</td>
-              <td>Excesso de velocidade</td>
-              <td>Grave</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i>
-                </a></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>MIA3H40</td>
-              <td>Usar luz alta dos faróis em via com iluminação pública</td>
-              <td>Leve</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>GSW5C30</td>
-              <td>Conduzir veículo com defeito de iluminação, sinalização ou lâmpadas queimadas</td>
-              <td>Média</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>LAL6J23</td>
-              <td>Rodizio</td>
-              <td>Média</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-            </tr>
-          </tbody>
+            <thead class="table-header">
+                <tr>
+                    <th class="table-header-cell">ID</th>
+                    <th class="table-header-cell placa">Placa do veículo</th>
+                    <th class="table-header-cell placa">Tipo de Infração</th>
+                    <th class="table-header-cell placa">Gravidade</th>
+                    <th class="table-header-cell placa">Imagens capturadas do veículo</th>
+                    <th></th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>NYK7C15</td>
+                    <td>Excesso de velocidade</td>
+                    <td>Grave</td>
+                    <td><a href="#"><i class="fa-regular fa-images px-2"></i>Visualizar foto</a></td>
+                    <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>MIA3H40</td>
+                  <td>Usar luz alta dos faróis em via com iluminação pública</td>
+                  <td>Leve</td>
+                  <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+                  <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>GSW5C30</td>
+                  <td>Conduzir veículo com defeito de iluminação, sinalização ou lâmpadas queimadas</td>
+                  <td>Média</td>
+                  <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+                  <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>LAL6J23</td>
+                  <td>Rodizio</td>
+                  <td>Média</td>
+                  <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+                  <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+                </tr>
+            </tbody>
         </table>
-
-      </div>
+    </div>
+    
     </div>
   </div>
 </body>
