@@ -10,6 +10,12 @@
   <link rel="stylesheet" href="src/style.css">
   <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
 
+  <style>
+    .table-header-cell.placa {
+      white-space: nowrap;
+    }
+  </style>
+
 </head>
 <body>
   <div class="container-fluid">
@@ -54,8 +60,84 @@
           <i class="fa-solid fa-chevron-left" style="color: white;"></i>
         </div>
       </div>
-      <div class="col-9">
+
+      <div class="col-10">
+        <h2>Veículos</h2>
+        Obs:Caso queria ver mais detalhes, clique no menu ao final da tabela ( <i
+        class="fa-solid fa-ellipsis-vertical" style="color: black;"></i> ) <br>
         
+        <div class="px-2 pt-3 pb-3">
+    
+          <i class="fa-solid fa-arrow-up-wide-short"></i> Ordenar por:
+          <select class="mr-3">
+            <option>Marca / Modelo</option>
+            <option>data</option>
+            <option>ID</option>
+          </select>
+          Ordem:
+          <select class="mr-5">
+            <option>Crescente</option>
+            <option>Decrescente</option>
+          </select>
+
+          <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> Buscar:
+          <input type="text" placeholder="Digite aqui">
+          <select class="mr-3">
+            <option>ID</option>
+            <option>Placa</option>
+          </select>
+          <button class="btn btn-primary btn-create">Aplicar</button>
+        </div>
+
+        <table class="table">
+          <thead class="table-header">
+            <tr>
+              <th class="table-header-cell">ID</th>
+              <th class="table-header-cell placa">Placa do veiculo</th>
+              <th class="table-header-cell placa">Marca / Modelo</th>
+              <th class="table-header-cell placa">Data da passagem</th>
+              <th class="table-header-cell placa">Imagens capturadas do veiculo</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>NYK7C15</td>
+              <td>Chevrolet - Onix 2018</td>
+              <td>06/05/2023 - 10:27</td>
+              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i>
+                </a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>MIA3H40</td>
+              <td>Hyundai - HB20 2015</td>
+              <td>05/05/2023 - 20:30</td>
+              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>GSW5C30</td>
+              <td>Volkswagen - Golf 1999</td>
+              <td>05/05/2023 - 9:57</td>
+              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>LAL6J23</td>
+              <td>BMW - X1 2020</td>
+              <td>04/05/2023 - 23:06</td>
+              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
     </div>
   </div>
