@@ -17,6 +17,7 @@
     }
 
     @media (max-width: 768px) {
+
       .sidebar {
         display: none;
       }
@@ -40,6 +41,7 @@
       .navbar {
         width: 90%;
         left: 0;
+        max-width: 90%;
       }
 
       .profile-info {
@@ -51,10 +53,24 @@
         margin-right: -25px;
       }
 
+      .container-fluid{
+        max-width: 100%;
+      }
+
       *,
       ::after,
       ::before {
         box-sizing: content-box;
+      }
+
+      .ordbox{
+        width: 200px;
+        margin-bottom: 20px;
+      }
+
+      .ordbox2{
+        width: 250px;
+        margin-bottom: 20px;
       }
 
     }
@@ -76,7 +92,7 @@
           <span class="navbar-brand mb-0 h1">CCTV List</span>
           <div class="profile-info">
             <div class="profile-picture"></div>
-            <span class="profile-name">User</span>
+            <a href="login.html"><span class="profile-name">Login</span></a>
           </div>
         </nav>
         <div class="sidebar">
@@ -118,12 +134,12 @@
 
         <div class="px-2 pt-2 pb-2">
           <span><i class="fa-solid fa-arrow-up-wide-short"></i> Ordenar por:</span>
-          <select class="mr-2">
+          <select class="mr-2 ordbox">
             <option>Tipo de Infração</option>
             <option>Gravidade</option>
           </select>
           <span>Ordem:</span>
-          <select class="mr-5">
+          <select class="mr-5 ordbox2">
             <option>Crescente</option>
             <option>Decrescente</option>
           </select>
@@ -134,7 +150,7 @@
             <option>ID</option>
             <option>Placa</option>
           </select>
-          <button class="btn btn-primary btn-create">Aplicar</button>
+          <button class="btn btn-primary btn-create mt-3">Aplicar</button>
         </div>
 
         <table class="table">
