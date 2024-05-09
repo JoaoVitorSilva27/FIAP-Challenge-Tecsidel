@@ -1,0 +1,39 @@
+main {
+  margin-top: 56px;
+  margin-left: 200px;
+}
+
+.container-primary-cam {
+  display: flex;
+  margin-left: 45px;
+}
+
+.container-cam {
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+}
+
+.swiper-container {
+  margin-top: 58px;
+}
+
+
+.swiper-container-outer {
+    position: relative;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+  }
+  
+  .swiper-button-next {
+    right: -100px;
+  }
+  
+  .swiper-button-prev {
+    left: 0;
+  }
