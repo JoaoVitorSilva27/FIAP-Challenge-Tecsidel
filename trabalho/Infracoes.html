@@ -16,8 +16,38 @@
       white-space: nowrap;
     }
 
-    @media (max-width: 768px) {
+    .table-responsive {
+      margin-left: 200px;
+      width: auto;
+    }
 
+    select {
+      height: 30px;
+      margin-left: 10px;
+    }
+
+    input {
+      margin-left: 10px;
+    }
+
+    .gap {
+      gap: 10px;
+    }
+
+    .filter {
+      margin-left: 2%;
+    }
+
+    h2 {
+      margin-left: 2%;
+    }
+
+    p {
+      margin-left: 2%;
+    }
+
+
+    @media (max-width: 768px) {
       .sidebar {
         display: none;
       }
@@ -34,14 +64,9 @@
         flex-basis: auto;
       }
 
-      .col-10 {
-        width: 100%;
-      }
-
       .navbar {
         width: 90%;
         left: 0;
-        max-width: 90%;
       }
 
       .profile-info {
@@ -53,25 +78,48 @@
         margin-right: -25px;
       }
 
-      .container-fluid{
-        max-width: 100%;
-      }
-
       *,
       ::after,
       ::before {
         box-sizing: content-box;
       }
 
-      .ordbox{
+      .ordbox {
         width: 200px;
-        margin-bottom: 20px;
       }
 
-      .ordbox2{
+      .ordbox2 {
         width: 250px;
-        margin-bottom: 20px;
       }
+
+      .table-responsive {
+        margin-left: 0px;
+      }
+
+      .aplicar {
+        margin-top: 15px;
+      }
+
+    }
+
+    @media (max-width: 867px) {
+      .marca {
+        display: none;
+      }
+
+      .table>* {
+        font-size: 14px;
+
+        th {
+          padding: 10px;
+        }
+
+        td {
+          padding: 10px;
+        }
+
+      }
+
 
     }
 
@@ -107,12 +155,6 @@
           <a href="index.html"" class=" sidebar-item">
             <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
 
-          <a href="Suporte.html" class="sidebar-item">
-            <i class="fa-solid fa-headset px-2"></i>Suporte</a>
-
-          <a href="CtAlertas.html" class="sidebar-item">
-            <i class="fa-solid fa-bell px-2"></i>Central de alertas</a>
-
           <a href="#" class="sidebar-item selected">
             <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
 
@@ -127,36 +169,43 @@
           <i class="fa-solid fa-chevron-left" style="color: white;"></i>
         </div>
       </div>
-      <div class="col-10 table-responsive">
+      <div class="table-responsive">
         <h2>Infrações</h2>
         <p>Obs: Caso queira ver mais detalhes ou reportar ao Detran, clique no menu ao final da Infração (<i
             class="fa-solid fa-ellipsis-vertical" style="color: black;"></i>)</p>
 
-        <div class="px-2 pt-2 pb-2">
-          <span><i class="fa-solid fa-arrow-up-wide-short"></i> Ordenar por:</span>
-          <select class="mr-2 ordbox">
-            <option>Tipo de Infração</option>
-            <option>Gravidade</option>
-          </select>
-          <span>Ordem:</span>
-          <select class="mr-5 ordbox2">
-            <option>Crescente</option>
-            <option>Decrescente</option>
-          </select>
+        <div class="px-2 pt-2 pb-2 d-flex align-items-center flex-wrap gap">
+          <div class="d-flex align-items-center filter">
+            <span><i class="fa-solid fa-arrow-up-wide-short"></i> Ordenar por:</span>
+            <select class="mr-2 ordbox">
+              <option>Tipo de Infração</option>
+              <option>Gravidade</option>
+            </select>
+          </div>
+          <div class="d-flex align-items-center filter">
+            <span>Ordem:</span>
+            <select class="mr-5 ordbox2">
+              <option>Crescente</option>
+              <option>Decrescente</option>
+            </select>
+          </div>
 
-          <span><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> Buscar:</span>
-          <input type="text" placeholder="Digite aqui">
-          <select class="mr-3">
-            <option>ID</option>
-            <option>Placa</option>
-          </select>
-          <button class="btn btn-primary btn-create mt-3">Aplicar</button>
+          <div class="d-grid align-items-center m-0">
+            <span><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> Buscar:</span>
+            <input type="text" placeholder="Digite aqui">
+            <select class="mr-3">
+              <option>ID</option>
+              <option>Placa</option>
+            </select>
+            <button class="btn btn-primary btn-create mt-3">Aplicar</button>
+          </div>
+
         </div>
 
         <table class="table">
           <thead class="table-header">
             <tr>
-              <th class="table-header-cell">ID</th>
+              <th class="table-header-cell placa">ID</th>
               <th class="table-header-cell placa">Placa do veículo</th>
               <th class="table-header-cell placa">Tipo de Infração</th>
               <th class="table-header-cell placa">Gravidade</th>
