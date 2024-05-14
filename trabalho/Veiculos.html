@@ -3,18 +3,50 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
   <title>FreeFlow</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="icon" href="caminho/para/o/icone.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="caminho/para/o/icone.ico" type="image/x-icon">
-  <link rel="stylesheet" href="src/style.css">
-  <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon"
+        href="caminho/para/o/icone.ico"
+        type="image/x-icon">
+  <link rel="shortcut icon"
+        href="caminho/para/o/icone.ico"
+        type="image/x-icon">
+  <link rel="stylesheet"
+        href="src/style.css">
+  <script src="https://kit.fontawesome.com/11541df052.js"
+          crossorigin="anonymous"></script>
 
   <style>
     .table-header-cell.placa {
       white-space: nowrap;
     }
+
+    .table-responsive {
+      margin-left: 200px;
+      width: auto;
+    }
+
+    select {
+      height: 30px;
+      margin-left: 10px;
+    }
+
+    input {
+      margin-left: 10px;
+    }
+
+    .gap {
+      gap:10px;
+    }
+
+    .filter {
+      /* margin-top: 20px;
+      margin-bottom: 25px; */
+    }
+
 
     @media (max-width: 768px) {
       .sidebar {
@@ -31,10 +63,6 @@
 
       .col {
         flex-basis: auto;
-      }
-
-      .col-10 {
-        width: 80%;
       }
 
       .navbar {
@@ -57,150 +85,232 @@
         box-sizing: content-box;
       }
 
-      .ordbox{
+      .ordbox {
         width: 200px;
-        margin-bottom: 20px;
       }
 
-      .ordbox2{
+      .ordbox2 {
         width: 250px;
-        margin-bottom: 20px;
       }
 
+      .table-responsive {
+        margin-left: 0px;
+      }
+      
+    }
+    @media (max-width: 867px) {
+      .marca {
+        display: none;
+      }
+
+      .table > *  {
+        font-size: 14px;
+      
+        th {
+          padding: 10px;
+        }
+        
+        td {
+          padding: 10px;
+        }
+
+      }
+
+      
     }
 
     @media (min-width: 769px) {
       .iconebar {
         display: none;
       }
+
     }
   </style>
 
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <nav class="navbar navbar-light bg-light">
-          <i class="fa-solid fa-bars iconebar"></i>
-          <span class="navbar-brand mb-0 h1">CCTV List</span>
-          <div class="profile-info">
-            <div class="profile-picture"></div>
-            <a href="login.html"><span class="profile-name">Login</span></a>
-          </div>
-        </nav>
-        <div class="sidebar">
-          <img src="src/img/Logo-Eysa.png" class="Logo">
-
-          <a href="Dashboard.html" class="sidebar-item">
-            <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
-
-          <a href="CctvList.html" class="sidebar-item">
-            <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
-
-          <a href="index.html" class="sidebar-item">
-            <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
-
-          <a href="Suporte.html" class="sidebar-item">
-            <i class="fa-solid fa-headset px-2"></i>Suporte</a>
-
-          <a href="CtAlertas.html" class="sidebar-item">
-            <i class="fa-solid fa-bell px-2"></i>Central de alertas</a>
-
-          <a href="Infracoes.html" class="sidebar-item">
-            <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
-
-          <a href="#" class="sidebar-item selected">
-            <i class="fa-solid fa-car px-2"></i>Veiculos</a>
-
-          <a href="Fluxo.html" class="sidebar-item">
-            <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
+  <div class="main">
+    <div>
+      <nav class="navbar navbar-light bg-light">
+        <i class="fa-solid fa-bars iconebar"></i>
+        <span class="navbar-brand mb-0 h1">CCTV List</span>
+        <div class="profile-info">
+          <div class="profile-picture"></div>
+          <a href="login.html"><span class="profile-name">Login</span></a>
         </div>
+      </nav>
+      <div class="sidebar">
+        <img src="src/img/Logo-Eysa.png"
+             class="Logo">
 
-        <div class="dark-section">
-          <i class="fa-solid fa-chevron-left" style="color: white;"></i>
-        </div>
+        <a href="Dashboard.html"
+           class="sidebar-item">
+          <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
+
+        <a href="CctvList.html"
+           class="sidebar-item">
+          <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
+
+        <a href="index.html"
+           class="sidebar-item">
+          <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
+
+        <a href="Suporte.html"
+           class="sidebar-item">
+          <i class="fa-solid fa-headset px-2"></i>Suporte</a>
+
+        <a href="CtAlertas.html"
+           class="sidebar-item">
+          <i class="fa-solid fa-bell px-2"></i>Central de alertas</a>
+
+        <a href="Infracoes.html"
+           class="sidebar-item">
+          <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
+
+        <a href="#"
+           class="sidebar-item selected">
+          <i class="fa-solid fa-car px-2"></i>Veiculos</a>
+
+        <a href="Fluxo.html"
+           class="sidebar-item">
+          <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
       </div>
 
-      <div class="col-10 table-responsive">
-        <h2>Veículos</h2>
-        <p>Obs: Caso queira ver mais detalhes, clique no menu ao final da tabela (<i
-            class="fa-solid fa-ellipsis-vertical" style="color: black;"></i>)</p>
+      <div class="dark-section">
+        <i class="fa-solid fa-chevron-left"
+           style="color: white;"></i>
+      </div>
+    </div>
 
-        <div class="px-2 pt-2 pb-2">
+    <div class="table-responsive">
+      <h2>Veículos</h2>
+      <p>Obs: Caso queira ver mais detalhes, clique no menu ao final da tabela (<i class="fa-solid fa-ellipsis-vertical"
+           style="color: black;"></i>)</p>
+
+      <div class="px-2 pt-2 pb-2 d-flex align-items-center flex-wrap gap">
+        <div class="d-flex align-items-center filter">
           <span><i class="fa-solid fa-arrow-up-wide-short"></i> Ordenar por:</span>
-          <select class="mr-3 ordbox">
+          <select class="ordbox">
             <option>Marca / Modelo</option>
             <option>data</option>
             <option>ID</option>
           </select>
+        </div>
+        <div class="d-flex align-items-center filter">
           <span>Ordem:</span>
-          <select class="mr-5 ordbox2">
+          <select class="ordbox2">
             <option>Crescente</option>
             <option>Decrescente</option>
           </select>
-
+        </div>
+        <div class="d-grid align-items-center m-0">
           <span><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> Buscar:</span>
-          <input type="text" placeholder="Digite aqui">
+          <input type="text"
+                 placeholder="Digite aqui">
           <select class="mr-3">
             <option>ID</option>
             <option>Placa</option>
           </select>
-          <button class="btn btn-primary btn-create mt-3">Aplicar</button>
+          <button class="btn btn-primary btn-create m-0">Aplicar</button>
         </div>
-
-        <table class="table">
-          <thead class="table-header">
-            <tr>
-              <th class="table-header-cell">ID</th>
-              <th class="table-header-cell placa">Placa do veiculo</th>
-              <th class="table-header-cell placa">Marca / Modelo</th>
-              <th class="table-header-cell placa">Data da passagem</th>
-              <th class="table-header-cell placa">Imagens capturadas do veiculo</th>
-              <th></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>NYK7C15</td>
-              <td>Chevrolet - Onix 2018</td>
-              <td>06/05/2023 - 10:27</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Visualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>MIA3H40</td>
-              <td>Hyundai - HB20 2015</td>
-              <td>05/05/2023 - 20:30</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>GSW5C30</td>
-              <td>Volkswagen - Golf 1999</td>
-              <td>05/05/2023 - 9:57</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>LAL6J23</td>
-              <td>BMW - X1 2020</td>
-              <td>04/05/2023 - 23:06</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-            </tr>
-          </tbody>
-        </table>
       </div>
 
+      <table class="table">
+        <thead class="table-header">
+          <tr>
+            <th class="table-header-cell placa"><strong>ID</strong></th>
+            <th id="thPlaca" class="table-header-cell placa"><strong>Placa do veiculo</strong></th>
+            <th class="table-header-cell placa marca"><strong>Marca / Modelo</strong></th>
+            <th class="table-header-cell placa"><strong>Data da passagem</strong></th>
+            <th id="imagenCap"
+                class="table-header-cell placa"><strong>Imagens capturadas do veiculo</strong></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>NYK7C15</td>
+            <td class="marca">Chevrolet / Onix 2018</td>
+            <td>06/05/2023 - 10:27</td>
+            <td><a class="viewPicture"
+                 href="#"><i class="fa-regular fa-images px-2"></i>Visualizar foto</a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"
+                   style="color: black;"></i></a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>MIA3H40</td>
+            <td class="marca">Hyundai / HB20 2015</td>
+            <td>05/05/2023 - 20:30</td>
+            <td><a class="viewPicture"
+                 href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"
+                   style="color: black;"></i></a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>GSW5C30</td>
+            <td class="marca">Volkswagen / Golf 1999</td>
+            <td>05/05/2023 - 9:57</td>
+            <td><a class="viewPicture"
+                 href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"
+                   style="color: black;"></i></a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>LAL6J23</td>
+            <td class="marca">BMW / X1 2020</td>
+            <td>04/05/2023 - 23:06</td>
+            <td><a class="viewPicture"
+                 href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"
+                   style="color: black;"></i></a></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
   </div>
 </body>
+
+<script>
+  function obtenerAnchoPantalla() {
+    var windowWidth = window.innerWidth;
+
+    var thImagenCap = document.querySelectorAll('#imagenCap');
+    var viewPicture = document.querySelectorAll('.viewPicture');
+    var thPlaca = document.querySelectorAll('#thPlaca');
+    
+    viewPicture.forEach(function (container) {
+      if (windowWidth < 1140) {
+        container.innerHTML = '<i class="fa-regular fa-images px-2"></i>'
+      } else {
+        container.innerHTML = '<i class="fa-regular fa-images px-2"></i>Visualizar foto'
+      }
+    });
+
+    if (windowWidth < 1140) {
+      thImagenCap[0].innerHTML = '<strong>Imagens</strong>'
+    } else {
+      thImagenCap[0].innerHTML = '<strong>Imagens capturadas do veiculo</strong>'
+    }
+
+    if (windowWidth < 768) {
+      thPlaca[0].innerHTML = '<strong>Placa</strong>'
+    } else {
+      thPlaca[0].innerHTML = '<strong>Placa do veiculo</strong>'
+    }
+
+  }
+
+  window.addEventListener("resize", obtenerAnchoPantalla);
+
+  obtenerAnchoPantalla();
+
+</script>
 
 </html>

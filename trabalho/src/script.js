@@ -11,6 +11,8 @@ var swiper = new Swiper(".mySwiper", {
   
 });
 
+swiper.params.slidesPerView = 4;
+swiper.update();
 
 function changeSrc(elemnt) {
   primaryCamElement = document.querySelectorAll('#primary-cam')
@@ -19,9 +21,20 @@ function changeSrc(elemnt) {
 	elemnt.src = srcPathPrimaryCam
 }
 
+
 function obtenerAnchoPantalla() {
-  var ancho = window.innerWidth;
-  console.log("Ancho de la pantalla: " + ancho + "px");
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+
+  swiper.height = (windowHeight - 114) / 2;
+  swiper.params.slidesPerView = Math.floor((windowWidth - 290) / 280); 
+
+  if (windowWidth < 768) {
+    swiper.allowTouchMove = true
+  }
+  
+  swiper.update();
+
 }
 
 window.addEventListener("resize", function() {
@@ -29,3 +42,8 @@ window.addEventListener("resize", function() {
 });
 
 obtenerAnchoPantalla();
+
+
+function stepsSwiper(windowWidth) {
+  swiper.params.slidesPerView = Math.floor((windowWidth - 290) / 280);  
+}
