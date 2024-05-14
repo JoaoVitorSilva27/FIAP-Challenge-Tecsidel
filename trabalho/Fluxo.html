@@ -1,86 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
   <title>FreeFlow</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="icon" href="caminho/para/o/icone.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="caminho/para/o/icone.ico" type="image/x-icon">
-  <link rel="stylesheet" href="src/style.css">
-  <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon"
+        href="caminho/para/o/icone.ico"
+        type="image/x-icon">
+  <link rel="shortcut icon"
+        href="caminho/para/o/icone.ico"
+        type="image/x-icon">
+  <link rel="stylesheet"
+        href="src/style.css">
+  <link rel="stylesheet"
+        href="src/fluxoStyle.css" />
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+  <script src="https://kit.fontawesome.com/11541df052.js"
+          crossorigin="anonymous"></script>
 
 </head>
+
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div class="col">
+      <div>
         <nav class="navbar navbar-light bg-light">
           <span class="navbar-brand mb-0 h1">CCTV List</span>
           <div class="profile-info">
             <div class="profile-picture"></div>
             <a href="login.html"><span class="profile-name">Login</span></a>
-        </div>
+          </div>
         </nav>
         <div class="sidebar">
-          <img src="src/img/Logo-Eysa.png" class="Logo">
+          <img src="src/img/Logo-Eysa.png"
+               class="Logo">
 
-            <a href="Dashboard.html" class="sidebar-item">
-              <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
+          <a href="Dashboard.html"
+             class="sidebar-item">
+            <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
 
-            <a href="CctvList.html" class="sidebar-item">
-              <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
+          <a href="CctvList.html"
+             class="sidebar-item">
+            <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
 
-            <a href="index.html" class="sidebar-item">
-              <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
+          <a href="index.html"
+             class="sidebar-item">
+            <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
 
-            <a href="Suporte.html" class="sidebar-item">
-              <i class="fa-solid fa-headset px-2"></i>Suporte</a>
-            
-            <a href="CtAlertas.html" class="sidebar-item">
-              <i class="fa-solid fa-bell px-2"></i>Central de alertas</a>
+          <a href="Suporte.html"
+             class="sidebar-item">
+            <i class="fa-solid fa-headset px-2"></i>Suporte</a>
 
-            <a href="Infracoes.html" class="sidebar-item">
-              <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
+          <a href="CtAlertas.html"
+             class="sidebar-item">
+            <i class="fa-solid fa-bell px-2"></i>Central de alertas</a>
 
-            <a href="Veiculos.html" class="sidebar-item">
-              <i class="fa-solid fa-car px-2"></i>Veiculos</a>
+          <a href="Infracoes.html"
+             class="sidebar-item">
+            <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
 
-            <a href="#" class="sidebar-item selected">
-              <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
-          </div>
+          <a href="Veiculos.html"
+             class="sidebar-item">
+            <i class="fa-solid fa-car px-2"></i>Veiculos</a>
+
+          <a href="#"
+             class="sidebar-item selected">
+            <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
+        </div>
 
         <div class="dark-section">
-          <i class="fa-solid fa-chevron-left" style="color: white;"></i>
+          <i class="fa-solid fa-chevron-left"
+             style="color: white;"></i>
         </div>
       </div>
-      <div class="col-10">
-					<h2>BR-101 (Rio Santos)</h2>
-					<div class="row">
-						<div class="col-sm-5 col-md-5">
-							<figure class="figure">
-								<img
-									src="./src/img/grafico.jpeg"
-									class="img-fluid rounded"
-									alt="Gráfico de Chamados"
-								/>
-							</figure>
-						</div>
-						<div class="col-sm-4 col-md-4">
-							<div class="fs-1 fw-bold text-center">
-								<h4>Últimas 24 horas:</h4>
-								<p></p>
-								<p>Fluxo NORMAL de veículos</p>
-								<p>10.758 automóveis de dois eixos</p>
-								<p>3.506 caminhões</p>
-								<p>123 veículos foram multados</p>
-								<p>3 veículos com placas irregulares</p>
-								<p>1 veículo com placa furtada</p>
-							</div>
-						</div>
-					</div>
+      <div id="main-container" class="col-8 main-container">
+        <h2>BR-101 (Rio Santos)</h2>
+        <div class="row">
+          <div class="">
+            <figure class="figure">
+              <img src="./src/img/grafico.jpeg"
+                   class="img-fluid rounded"
+                   alt="Gráfico de Chamados" />
+            </figure>
+          </div>
+          <div class="col-lg-5">
+            <div class="">
+              <h4>Últimas 24 horas:</h4>
+              <p></p>
+              <p>Fluxo NORMAL de veículos</p>
+              <p>10.758 automóveis de dois eixos</p>
+              <p>3.506 caminhões</p>
+              <p>123 veículos foram multados</p>
+              <p>3 veículos com placas irregulares</p>
+              <p>1 veículo com placa furtada</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </body>
+  <script src="./src/fluxoScript.js"></script>
+
 </html>
