@@ -6,41 +6,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FreeFlow</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="icon" href="caminho/para/o/icone.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="caminho/para/o/icone.ico" type="image/x-icon">
   <link rel="stylesheet" href="src/style.css">
   <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
 
-<style>
+  <style>
+    .table-header-cell.placa {
+      white-space: nowrap;
+    }
 
-@media (max-width: 768px) {
-      .col{
-        flex-basis: 0;
-        flex-grow: 0;
+    .table-responsive {
+      margin-left: 200px;
+      width: auto;
+    }
+
+    select {
+      height: 30px;
+      margin-left: 10px;
+    }
+
+    input {
+      margin-left: 10px;
+    }
+
+    .gap {
+      gap: 10px;
+    }
+
+    .filter {
+      margin-left: 2%;
+    }
+
+    h2 {
+      margin-left: 2%;
+    }
+
+    p {
+      margin-left: 2%;
+    }
+
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .dark-section {
+        display: none;
+      }
+
+      .bg-light {
+        margin-left: 0;
+      }
+
+      .col {
+        flex-basis: auto;
+      }
+
+      .navbar {
+        width: 90%;
+        left: 0;
+      }
+
+      .profile-info {
+        margin-right: 20px;
+        padding-right: 10%;
+      }
+
+      .row {
+        margin-right: -25px;
+      }
+
+      *,
+      ::after,
+      ::before {
+        box-sizing: content-box;
+      }
+
+      .ordbox {
+        width: 200px;
+      }
+
+      .ordbox2 {
+        width: 250px;
+      }
+
+      .table-responsive {
+        margin-left: 0px;
+      }
+
+      .aplicar {
+        margin-top: 15px;
       }
 
     }
 
-  @media (min-width: 769px) {
+    @media (max-width: 867px) {
+      .marca {
+        display: none;
+      }
+
+      .table>* {
+        font-size: 14px;
+
+        th {
+          padding: 10px;
+        }
+
+        td {
+          padding: 10px;
+        }
+
+      }
+
+
+    }
+
+    @media (min-width: 769px) {
       .iconebar {
         display: none;
       }
 
     }
-</style>
+  </style>
 
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <nav class="navbar navbar-light bg-light">
-          <i class="fa-solid fa-bars iconebar"></i>
-          <span class="navbar-brand mb-0 h1">CCTV List</span>
-          <div class="profile-info">
-            <div class="profile-picture"></div>
-            <a href="login.html"><span class="profile-name">Login</span></a>
+  <div class="main">
+    <div>
+      <nav class="navbar navbar-light bg-light">
+        <i class="fa-solid fa-bars iconebar"></i>
+        <span class="navbar-brand mb-0 h1">Admin manager</span>
+        <div class="profile-info">
+          <div class="profile-picture"></div>
+          <a href="login.html"><span class="profile-name">Login</span></a>
         </div>
       </nav>
       <div class="sidebar">
@@ -61,60 +160,93 @@
         <a href="Veiculos.html" class="sidebar-item">
           <i class="fa-solid fa-car px-2"></i>Veiculos</a>
 
-            <a href="Fluxo.html" class="sidebar-item">
-              <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
-          </div>
-        <div class="dark-section">
-          <i class="fa-solid fa-chevron-left" style="color: white;"></i>
-        </div>
+        <a href="Fluxo.html" class="sidebar-item">
+          <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
       </div>
-      <div class="col-9">
-        <div class="content">
-          <h2>Usuários <a href="cadastro.html"><button class="btn btn-primary btn-create">Criar Novo</button></a></h2>
-          <table class="table">
-            <thead class="table-header">
-              <tr>
-                <th class="table-header-cell">ID</th>
-                <th class="table-header-cell">Nome</th>
-                <th class="table-header-cell">Grupo</th>
-                <th class="table-header-cell">Email</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Admin</td>
-                <td>Admnistrador</td>
-                <td>jane@gmail.com</td>
-                <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>João</td>
-                <td>Monitor</td>
-                <td>joaobrito@example.com</td>
-                <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Carlos</td>
-                <td>Segurança</td>
-                <td>cahdu@example.com</td>
-                <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Francisco</td>
-                <td>Monitor</td>
-                <td>chico237@example.com</td>
-                <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+
+      <div class="dark-section">
+        <i class="fa-solid fa-chevron-left" style="color: white;"></i>
       </div>
     </div>
+
+    <div class="table-responsive">
+      <h2>Usuários<a href="cadastro.html" class="mx-2"><button class="btn btn-primary btn-create2"><i
+              class="fa-solid fa-user-plus px-1"></i>Criar Novo</button></a></h2>
+      <p>Obs: Caso queira ver mais detalhes, clique no menu ao final da tabela (<i class="fa-solid fa-ellipsis-vertical"
+          style="color: black;"></i>)</p>
+
+      <div class="px-2 pt-2 pb-2 d-flex align-items-center flex-wrap gap">
+        <div class="d-flex align-items-center filter">
+          <span><i class="fa-solid fa-arrow-up-wide-short"></i> Ordenar por:</span>
+          <select class="ordbox">
+            <option>Grupo</option>
+            <option>ID</option>
+          </select>
+        </div>
+        <div class="d-flex align-items-center filter">
+          <span>Ordem:</span>
+          <select class="ordbox2">
+            <option>Crescente</option>
+            <option>Decrescente</option>
+          </select>
+        </div>
+        <div class="d-grid align-items-center m-0">
+          <span><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> Buscar:</span>
+          <input type="text" placeholder="Digite aqui">
+          <select class="mr-3">
+            <option>ID</option>
+            <option>Nome</option>
+            <option>Email</option>
+          </select>
+          <button class="btn btn-primary btn-create aplicar">Aplicar</button>
+        </div>
+      </div>
+
+      <table class="table">
+        <thead class="table-header">
+          <tr>
+            <th class="table-header-cell placa"><strong>ID</strong></th>
+            <th id="thPlaca" class="table-header-cell placa"><strong>Nome</strong></th>
+            <th class="table-header-cell placa "><strong>Grupo</strong></th>
+            <th class="table-header-cell placa marca"><strong>Email</strong></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Admin</td>
+            <td>Administrador</td>
+            <td class="marca">adm@gmail.com</td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>João</td>
+            <td>Monitor</td>
+            <td class="marca">joao@gmail.com</td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Carlos</td>
+            <td>Segurança</td>
+            <td class="marca">carlos@gmail.com</td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Francisco</td>
+            <td>Monitor</td>
+            <td class="marca">chico@gmail.com</td>
+
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </body>
 

@@ -55,6 +55,18 @@ body {
   border-radius: 5px;
   }
 
+  .btn-create2 {
+    width: 150px;
+    height: 39px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    background-color: #56a4FF;
+    border: 1px solid #56A4FF;
+    border-radius: 5px;
+    }
+
   .navbar-brand {
   margin-left: 15px;
   }

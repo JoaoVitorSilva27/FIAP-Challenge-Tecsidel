@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FreeFlow</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="icon" href="caminho/para/o/icone.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="caminho/para/o/icone.ico" type="image/x-icon">
   <link rel="stylesheet" href="src/style.css">
   <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
 
@@ -119,8 +117,6 @@
         }
 
       }
-
-
     }
 
     @media (min-width: 769px) {
@@ -129,129 +125,164 @@
       }
     }
   </style>
+
 </head>
 
 <body>
   <div class="main">
-      <div >
-        <nav class="navbar navbar-light bg-light">
-          <i class="fa-solid fa-bars iconebar"></i>
-          <span class="navbar-brand mb-0 h1">Infrações</span>
-          <div class="profile-info">
-            <div class="profile-picture"></div>
-            <a href="login.html"><span class="profile-name">Login</span></a>
-          </div>
-        </nav>
-        <div class="sidebar">
-          <img src="src/img/Logo-Eysa.png" class="Logo">
-
-          <a href="Dashboard.html" class="sidebar-item">
-            <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
-
-          <a href="CctvList.html" class="sidebar-item">
-            <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
-
-          <a href="index.html"" class=" sidebar-item">
-            <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
-
-          <a href="#" class="sidebar-item selected">
-            <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
-
-          <a href="Veiculos.html" class="sidebar-item">
-            <i class="fa-solid fa-car px-2"></i>Veiculos</a>
-
-          <a href="Fluxo.html" class="sidebar-item">
-            <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
+    <div>
+      <nav class="navbar navbar-light bg-light">
+        <i class="fa-solid fa-bars iconebar"></i>
+        <span class="navbar-brand mb-0 h1">Infrações</span>
+        <div class="profile-info">
+          <div class="profile-picture"></div>
+          <a href="login.html"><span class="profile-name">Login</span></a>
         </div>
+      </nav>
+      <div class="sidebar">
+        <img src="src/img/Logo-Eysa.png" class="Logo">
 
-        <div class="dark-section">
-          <i class="fa-solid fa-chevron-left" style="color: white;"></i>
-        </div>
-      
-      <div class="table-responsive">
-        <h2>Infrações</h2>
-        <p>Obs: Caso queira ver mais detalhes ou reportar ao Detran, clique no menu ao final da Infração (<i
-            class="fa-solid fa-ellipsis-vertical" style="color: black;"></i>)</p>
+        <a href="Dashboard.html" class="sidebar-item">
+          <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
 
-        <div class="px-2 pt-2 pb-2 d-flex align-items-center flex-wrap gap">
-          <div class="d-flex align-items-center filter">
-            <span><i class="fa-solid fa-arrow-up-wide-short"></i> Ordenar por:</span>
-            <select class="ordbox">
-              <option>Tipo de Infração</option>
-              <option>Gravidade</option>
-            </select>
-          </div>
-          <div class="d-flex align-items-center filter">
-            <span>Ordem:</span>
-            <select class="ordbox2">
-              <option>Crescente</option>
-              <option>Decrescente</option>
-            </select>
-          </div>
+        <a href="CctvList.html" class="sidebar-item">
+          <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
 
-          <div class="d-grid align-items-center m-0">
-            <span><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> Buscar:</span>
-            <input type="text" placeholder="Digite aqui">
-            <select class="mr-3">
-              <option>ID</option>
-              <option>Placa</option>
-            </select>
-            <button class="btn btn-primary btn-create mt-3">Aplicar</button>
-          </div>
+        <a href="index.html" class="sidebar-item">
+          <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
 
-        </div>
+        <a href="#" class="sidebar-item selected">
+          <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
 
-        <table class="table">
-          <thead class="table-header">
-            <tr>
-              <th class="table-header-cell placa">ID</th>
-              <th class="table-header-cell placa">Placa do veículo</th>
-              <th class="table-header-cell placa">Tipo de Infração</th>
-              <th class="table-header-cell placa">Gravidade</th>
-              <th class="table-header-cell placa">Imagens capturadas do veículo</th>
-              <th></th>
-            </tr>
-          </thead>
+        <a href="Veiculos.html" class="sidebar-item">
+          <i class="fa-solid fa-car px-2"></i>Veiculos</a>
 
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>NYK7C15</td>
-              <td>Excesso de velocidade</td>
-              <td>Grave</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Visualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>MIA3H40</td>
-              <td>Usar luz alta dos faróis em via com iluminação pública</td>
-              <td>Leve</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>GSW5C30</td>
-              <td>Conduzir veículo com defeito de iluminação, sinalização ou lâmpadas queimadas</td>
-              <td>Média</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>LAL6J23</td>
-              <td>Rodizio</td>
-              <td>Média</td>
-              <td><a href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
-              <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
-            </tr>
-          </tbody>
-        </table>
+        <a href="Fluxo.html" class="sidebar-item">
+          <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
       </div>
 
+      <div class="dark-section">
+        <i class="fa-solid fa-chevron-left" style="color: white;"></i>
+      </div>
     </div>
+
+    <div class="table-responsive">
+      <h2>Infrações</h2>
+      <p>Obs: Caso queira ver mais detalhes ou reportar ao detran, clique no menu ao final da tabela (<i
+          class="fa-solid fa-ellipsis-vertical" style="color: black;"></i>)</p>
+
+      <div class="px-2 pt-2 pb-2 d-flex align-items-center flex-wrap gap">
+        <div class="d-flex align-items-center filter">
+          <span><i class="fa-solid fa-arrow-up-wide-short"></i> Ordenar por:</span>
+          <select class="ordbox">
+            <option>Tipo de Infração</option>
+            <option>Gravidade</option>
+          </select>
+        </div>
+        <div class="d-flex align-items-center filter">
+          <span>Ordem:</span>
+          <select class="ordbox2">
+            <option>Crescente</option>
+            <option>Decrescente</option>
+          </select>
+        </div>
+        <div class="d-grid align-items-center m-0">
+          <span><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> Buscar:</span>
+          <input type="text" placeholder="Digite aqui">
+          <select class="mr-3">
+            <option>ID</option>
+            <option>Placa</option>
+          </select>
+          <button class="btn btn-primary btn-create aplicar">Aplicar</button>
+        </div>
+      </div>
+
+      <table class="table">
+        <thead class="table-header">
+          <tr>
+            <th class="table-header-cell placa"><strong>ID</strong></th>
+            <th id="thPlaca" class="table-header-cell placa"><strong>Placa do veiculo</strong></th>
+            <th class="table-header-cell placa"><strong>Tipo de Infração</strong></th>
+            <th class="table-header-cell placa marca"><strong>Gravidade</strong></th>
+            <th id="imagenCap" class="table-header-cell placa"><strong>Imagens capturadas do veiculo</strong></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>NYK7C15</td>
+            <td>Excesso de velocidade</td>
+            <td class="marca">Grave</td>
+            <td><a class="viewPicture" href="#"><i class="fa-regular fa-images px-2"></i>Visualizar foto</a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>MIA3H40</td>
+            <td>iluminação inadequada</td>
+            <td class="marca">Leve</td>
+            <td><a class="viewPicture" href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>GSW5C30</td>
+            <td>Lanterna queimada</td>
+            <td class="marca">Média</td>
+            <td><a class="viewPicture" href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>LAL6J23</td>
+            <td>Rodizio</td>
+            <td class="marca">Média</td>
+            <td><a class="viewPicture" href="#"><i class="fa-regular fa-images px-2"></i>Vizualizar foto</a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </body>
+
+<script>
+  function picture() {
+    var windowWidth = window.innerWidth;
+
+    var thImagenCap = document.querySelectorAll('#imagenCap');
+    var viewPicture = document.querySelectorAll('.viewPicture');
+    var thPlaca = document.querySelectorAll('#thPlaca');
+    
+    viewPicture.forEach(function (container) {
+      if (windowWidth < 1140) {
+        container.innerHTML = '<i class="fa-regular fa-images px-2"></i>'
+      } else {
+        container.innerHTML = '<i class="fa-regular fa-images px-2"></i>Visualizar foto'
+      }
+    });
+
+    if (windowWidth < 1140) {
+      thImagenCap[0].innerHTML = '<strong>Imagens</strong>'
+    } else {
+      thImagenCap[0].innerHTML = '<strong>Imagens capturadas do veiculo</strong>'
+    }
+
+    if (windowWidth < 768) {
+      thPlaca[0].innerHTML = '<strong>Placa</strong>'
+    } else {
+      thPlaca[0].innerHTML = '<strong>Placa do veiculo</strong>'
+    }
+
+  }
+
+  window.addEventListener("resize", picture);
+
+  picture();
+
+</script>
 
 </html>
