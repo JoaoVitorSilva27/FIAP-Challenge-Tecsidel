@@ -1,58 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FreeFlow</title>
+  <title>CCTV List</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="icon" href="caminho/para/o/icone.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="caminho/para/o/icone.ico" type="image/x-icon">
   <link rel="stylesheet" href="src/style.css">
-  <link rel="stylesheet" href="src/styleSwiper.css">
   <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
 
+  <style>
+    .table-responsive {
+      margin-left: 220px; 
+      width: auto;
+    }
+
+    .status-icon {
+      font-size: 20px;
+    }
+
+    .active {
+      color: green;
+    }
+
+    .inactive {
+      color: red;
+    }
+
+    .card {
+      width: auto;
+      margin-right: 20px;
+    }
+
+    .card-body {
+      text-align: center;
+    }
+
+    .quadro {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 992px) {
+      .table-responsive {
+        margin-left: 0;
+      }
+    }
+  </style>
+
 </head>
+
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <nav class="navbar navbar-light bg-light">
-          <span class="navbar-brand mb-0 h1">CCTV List</span>
-          <div class="profile-info">
-            <div class="profile-picture"></div>
-            <a href="login.html"><span class="profile-name">Login</span></a>
+  <div class="main">
+    <div>
+      <nav class="navbar navbar-light bg-light">
+        <i class="fa-solid fa-bars iconebar"></i>
+        <span class="navbar-brand mb-0 h1 ml-3">CCTV List</span> 
+        <div class="profile-info">
+          <div class="profile-picture"></div>
+          <a href="login.html"><span class="profile-name">Login</span></a>
         </div>
-        </nav>
-        <div class="sidebar">
-          <img src="src/img/Logo-Eysa.png" class="Logo">
+      </nav>
+      <div class="sidebar">
+        <img src="src/img/Logo-Eysa.png" class="Logo">
+        <a href="Dashboard.html" class="sidebar-item"><i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
+        <a href="CctvList.html" class="sidebar-item selected"><i class="fa-solid fa-tv px-2"></i>CCTV List</a>
+        <a href="index.html" class="sidebar-item"><i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
+        <a href="Infracoes.html" class="sidebar-item"><i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
+        <a href="Veiculos.html" class="sidebar-item"><i class="fa-solid fa-car px-2"></i>Veiculos</a>
+        <a href="Fluxo.html" class="sidebar-item"><i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
+      </div>
 
-            <a href="Dashboard.html" class="sidebar-item">
-              <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
+      <div class="dark-section">
+        <i class="fa-solid fa-chevron-left" style="color: white;"></i>
+      </div>
+    </div>
 
-            <a href="#" class="sidebar-item selected">
-              <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
+    <div class="table-responsive">
+      <h2>CCTV List</h2>
 
-            <a href="index.html" class="sidebar-item ">
-              <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
-
-            <a href="Infracoes.html" class="sidebar-item">
-              <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
-
-            <a href="Veiculos.html" class="sidebar-item">
-              <i class="fa-solid fa-car px-2"></i>Veiculos</a>
-
-            <a href="Fluxo.html" class="sidebar-item">
-              <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
+      <div class="quadro">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Número de Câmeras</h5>
+            <p class="card-text">20 <i class="fas fa-video status-icon"></i></p> 
           </div>
-
-        <div class="dark-section">
-          <i class="fa-solid fa-chevron-left" style="color: white;"></i>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Câmeras Ativas</h5>
+            <p class="card-text">15 <i class="fas fa-check-circle status-icon active"></i></p> 
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Câmeras Inativas</h5>
+            <p class="card-text">5 <i class="fas fa-times-circle status-icon inactive"></i></p> 
+          </div>
         </div>
       </div>
-      <div class="col-9">
-        
-      </div>
+
+      <table class="table">
+        <thead class="table-header">
+          <tr>
+            <th><strong>ID</strong></th>
+            <th><strong>Nome</strong></th>
+            <th><strong>Grupo</strong></th>
+            <th><strong>Status</strong></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Câmera 1</td>
+            <td>Grupo A</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Câmera 2</td>
+            <td>Grupo B</td>
+            <td><i class="fas fa-times-circle status-icon inactive"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Câmera 3</td>
+            <td>Grupo A</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Câmera 4</td>
+            <td>Grupo C</td>
+            <td><i class="fas fa-times-circle status-icon inactive"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </body>
+
 </html>
