@@ -134,6 +134,12 @@
         <i class="fa-solid fa-bars iconebar"></i>
         <span class="navbar-brand mb-0 h1">Veículos</span>
         <div class="profile-info">
+          <div class="alert-arrow"></div>
+          <i class="fa-regular fa-bell fa-xl mr-4" role="button" onclick="alerta()"></i>
+          <div class="alert-menu" id="alertMenu" style="display: none;">
+            <div id="alertList"></div>
+          </div>
+        
           <div class="profile-picture"></div>
           <a href="login.html"><span class="profile-name">Login</span></a>
         </div>
@@ -303,6 +309,9 @@
   obtenerAnchoPantalla();
 
 </script>
+
+<script src="src/listaAlerta.js"></script>
+  <script src="./src/scriptAlerta.js"></script>
 <script src="./src/navBarScript.js"></script>
 
 </html>

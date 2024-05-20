@@ -3,21 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreeFlow</title>
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="icon"
-          href="caminho/para/o/icone.ico"
-          type="image/x-icon">
-    <link rel="shortcut icon"
-          href="caminho/para/o/icone.ico"
-          type="image/x-icon">
-    <link rel="stylesheet"
-          href="src/style.css">
-    <script src="https://kit.fontawesome.com/11541df052.js"
-            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="caminho/para/o/icone.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="caminho/para/o/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
     <style>
         .white-section {
             padding: 20px;
@@ -75,44 +67,42 @@
             <div class="col">
                 <nav class="navbar navbar-light bg-light">
                     <i class="fa-solid fa-bars iconebar"></i>
-                    <span class="navbar-brand mb-0 h1">CCTV List</span>
+                    <span class="navbar-brand mb-0 h1">Cadastro</span>
                     <div class="profile-info">
+                        <div class="alert-arrow"></div>
+                        <i class="fa-regular fa-bell fa-xl mr-4" role="button" onclick="alerta()"></i>
+                        <div class="alert-menu" id="alertMenu" style="display: none;">
+                            <div id="alertList"></div>
+                        </div>
+
                         <div class="profile-picture"></div>
                         <a href="login.html"><span class="profile-name">Login</span></a>
                     </div>
                 </nav>
                 <div class="sidebar sidebar-active">
-                    <img src="src/img/Logo-Eysa.png"
-                         class="Logo">
+                    <img src="src/img/Logo-Eysa.png" class="Logo">
 
-                    <a href="Dashboard.html"
-                       class="sidebar-item">
+                    <a href="Dashboard.html" class="sidebar-item">
                         <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
 
-                    <a href="CctvList.html"
-                       class="sidebar-item">
+                    <a href="CctvList.html" class="sidebar-item">
                         <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
 
-                    <a href="index.html"
-                       class="sidebar-item selected">
+                    <a href="index.html" class="sidebar-item selected">
                         <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
 
-                    <a href="Infracoes.html"
-                       class="sidebar-item">
+                    <a href="Infracoes.html" class="sidebar-item">
                         <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
 
-                    <a href="#"
-                       class="sidebar-item">
+                    <a href="#" class="sidebar-item">
                         <i class="fa-solid fa-car px-2"></i>Veiculos</a>
 
-                    <a href="Fluxo.html"
-                       class="sidebar-item">
+                    <a href="Fluxo.html" class="sidebar-item">
                         <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
                 </div>
 
                 <div class="dark-section dark-section-active">
-                    <i class="fa-solid fa-chevron-left"
-                       style="color: white;"></i>
+                    <i class="fa-solid fa-chevron-left" style="color: white;"></i>
                 </div>
             </div>
             <div class="col-10">
@@ -122,47 +112,30 @@
                     <form>
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input type="text"
-                                   class="form-control"
-                                   id="nome"
-                                   required>
+                            <input type="text" class="form-control" id="nome" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email"
-                                   class="form-control"
-                                   id="email"
-                                   required>
+                            <input type="email" class="form-control" id="email" required>
                         </div>
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="senha">Senha</label>
-                                <input type="password"
-                                       class="form-control"
-                                       id="senha"
-                                       required>
+                                <input type="password" class="form-control" id="senha" required>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="novaSenha">Nova Senha</label>
-                                <input type="password"
-                                       class="form-control"
-                                       id="novaSenha"
-                                       required>
+                                <input type="password" class="form-control" id="novaSenha" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="dataNascimento">Data de Nascimento</label>
-                                <input type="date"
-                                       class="form-control"
-                                       id="dataNascimento"
-                                       required>
+                                <input type="date" class="form-control" id="dataNascimento" required>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="grupo">Grupo</label>
-                                <select class="custom-select"
-                                        id="grupo"
-                                        required>
+                                <select class="custom-select" id="grupo" required>
                                     <option value="">Selecione...</option>
                                     <option value="Grupo 1">Grupo 1</option>
                                     <option value="Grupo 2">Grupo 2</option>
@@ -170,15 +143,16 @@
                                 </select>
                             </div>
                         </div>
-                        <button class="btn btn-primary"
-                                type="submit">Cadastrar</button>
-                        <button class="btn btn-secondary"
-                                type="button">Cancelar</button>
+                        <button class="btn btn-primary" type="submit">Cadastrar</button>
+                        <button class="btn btn-secondary" type="button">Cancelar</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="src/listaAlerta.js"></script>
+    <script src="./src/scriptAlerta.js"></script>
 </body>
 
 </html>
