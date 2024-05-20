@@ -200,3 +200,38 @@ h2 {
     }
   }
 }
+
+.alert-menu {
+  position: absolute;
+  top: 50px; /* Ajuste conforme necessário */
+  right: 100px; /* Ajuste conforme necessário */
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.alert-item {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.alert-item:last-child {
+  border-bottom: none;
+}
+
+.alert-item:hover {
+  background-color: #f5f5f5;
+}
+
+.alert-arrow {
+  position: absolute;
+  top: 40px;
+  right: 130px; 
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ccc; 
+  display: none;
+}
