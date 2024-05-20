@@ -36,13 +36,14 @@
     <div class="row">
       <div class="col">
         <nav class="navbar navbar-light bg-light">
+          <i class="fa-solid fa-bars iconebar"></i>
           <span class="navbar-brand mb-0 h1">Dashboard</span>
           <div class="profile-info">
             <div class="profile-picture"></div>
             <a href="login.html"><span class="profile-name">Login</span></a>
           </div>
         </nav>
-        <div class="sidebar">
+        <div class="sidebar sidebar-active">
           <img src="src/img/Logo-Eysa.png"
                class="Logo" />
 
@@ -71,7 +72,7 @@
             <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
         </div>
 
-        <div class="dark-section">
+        <div class="dark-section dark-section-active">
           <i class="fa-solid fa-chevron-left"
              style="color: white"></i>
         </div>
@@ -80,17 +81,47 @@
     </div>
   </div>
   <main>
+    <div id="primary-cam"
+         class="container-primary-cam">
+      <div class="relative-img">
+        <div class="list-cam-info">
+          <p>Câmera 1</p>
+          <i class="fas fa-video status-icon"></i>
+          <svg width="11"
+               height="11"
+               viewBox="0 0 11 11"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="5.36156"
+                     cy="5.11417"
+                     rx="4.9558"
+                     ry="5.11396"
+                     fill="#1ECA25" />
+          </svg>
 
-    <div class="container-primary-cam">
-      <img id="primary-cam"
-           class="primary-cam"
-           src="./src/img/cam1.png">
+          <i class="fas fa-wifi"></i>
+          <svg width="11"
+               height="11"
+               viewBox="0 0 11 11"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="5.36156"
+                     cy="5.11417"
+                     rx="4.9558"
+                     ry="5.11396"
+                     fill="#1ECA25" />
+          </svg>
+
+        </div>
+        <img class="primary-cam"
+             src="./src/img/cam1.png">
+      </div>
 
       <div class="container-statistics">
         <h2>Estatísticas:</h2>
-        
+
         <h3>Velocidade</h3>
-        <p class="Velocidade">25 <span>km/h</span></p> 
+        <p class="Velocidade">25 <span>km/h</span></p>
         <h3>Placa</h3>
         <p class="placa">AB9UJ239</p>
         <h3>Status</h3>
@@ -105,53 +136,763 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="container-cam">
-              <img src="./src/img/cam1.png"
-                   onclick="changeSrc(this)" />
-              <img src="./src/img/cam2.png"
-                   onclick="changeSrc(this)" />
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info sup">
+                  <p>Câmera 1</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam1.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info bot">
+                  <p>Câmera 2</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam6.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="container-cam">
-              <img src="./src/img/cam3.png"
-                   onclick="changeSrc(this)" />
-              <img src="./src/img/cam4.png"
-                   onclick="changeSrc(this)" />
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info sup">
+                  <p>Câmera 3</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam3.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info bot">
+                  <p>Câmera 4</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#CA1E1E" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#CA1E1E" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="container-cam">
-              <img src="./src/img/cam5.png"
-                   onclick="changeSrc(this)" />
-              <img src="./src/img/cam6.png"
-                   onclick="changeSrc(this)" />
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info sup">
+                  <p>Câmera 5</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam5.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info bot">
+                  <p>Câmera 6</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam6.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="container-cam">
-              <img src="./src/img/cam7.png"
-                   onclick="changeSrc(this)" />
-              <img src="./src/img/cam8.png"
-                   onclick="changeSrc(this)" />
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info sup">
+                  <p>Câmera 7</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam7.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info bot">
+                  <p>Câmera 8</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#CA1E1E" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#CA1E1E" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="container-cam">
-              <img src="./src/img/cam4.png"
-                   onclick="changeSrc(this)" />
-              <img src="./src/img/cam5.png"
-                   onclick="changeSrc(this)" />
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info sup">
+                  <p>Câmera 9</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam8.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info bot">
+                  <p>Câmera 10</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam9.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container-cam">
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info sup">
+                  <p>Câmera 11</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam1.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info bot">
+                  <p>Câmera 12</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam5.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container-cam">
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info sup">
+                  <p>Câmera 13</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam5.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info bot">
+                  <p>Câmera 14</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam6.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container-cam">
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info sup">
+                  <p>Câmera 15</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam7.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info bot">
+                  <p>Câmera 16</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam1.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container-cam">
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info sup">
+                  <p>Câmera 17</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam8.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info bot">
+                  <p>Câmera 18</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam9.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container-cam">
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info sup">
+                  <p>Câmera 19</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam1.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
+              <div class="container-img-cam"
+                   onclick="changeSrc(this)">
+                <div class="list-cam-info bot">
+                  <p>Câmera 20</p>
+                  <i class="fas fa-video status-icon"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                  <i class="fas fa-wifi"></i>
+                  <svg width="11"
+                       height="11"
+                       viewBox="0 0 11 11"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="5.36156"
+                             cy="5.11417"
+                             rx="4.9558"
+                             ry="5.11396"
+                             fill="#1ECA25" />
+                  </svg>
+
+                </div>
+                <img src="./src/img/cam5.png"
+                     onerror="this.src='./src/img/camSemSinal.png'" />
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="swiper-button-prev"></div>
     </div>
+
+
+    <!-- Alert -->
+
+    <div aria-live="polite"
+         aria-atomic="true">
+      <div style="position: fixed; top: 76px; right: 10px;">
+
+        <div id="toast"
+             class="toast"
+             role="alert"
+             aria-live="assertive"
+             aria-atomic="true">
+
+        </div>
+      </div>
+    </div>
+    <!-- Alert -->
+
+
   </main>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+          integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+          integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+          crossorigin="anonymous"></script>
   <script src="./src/script.js"></script>
+  <script src="./src/navBarScript.js"></script>
 </body>
 
 </html>

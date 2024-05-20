@@ -3,11 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
   <title>FreeFlow</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="src/style.css">
-  <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet"
+        href="src/style.css">
+  <script src="https://kit.fontawesome.com/11541df052.js"
+          crossorigin="anonymous"></script>
 
   <style>
     .table-header-cell.placa {
@@ -17,6 +21,7 @@
     .table-responsive {
       margin-left: 200px;
       width: auto;
+      padding: 0px 42px;
     }
 
     select {
@@ -44,15 +49,19 @@
       margin-left: 2%;
     }
 
+    .table {
+      background-color: #fff;
+    }
+
 
     @media (max-width: 768px) {
-      .sidebar {
+      /* .sidebar {
         display: none;
       }
 
       .dark-section {
         display: none;
-      }
+      } */
 
       .bg-light {
         margin-left: 0;
@@ -63,23 +72,12 @@
       }
 
       .navbar {
-        width: 90%;
+        width: 100%;
         left: 0;
-      }
-
-      .profile-info {
-        margin-right: 20px;
-        padding-right: 10%;
       }
 
       .row {
         margin-right: -25px;
-      }
-
-      *,
-      ::after,
-      ::before {
-        box-sizing: content-box;
       }
 
       .ordbox {
@@ -117,15 +115,6 @@
         }
 
       }
-
-
-    }
-
-    @media (min-width: 769px) {
-      .iconebar {
-        display: none;
-      }
-
     }
   </style>
 
@@ -142,38 +131,46 @@
           <a href="login.html"><span class="profile-name">Login</span></a>
         </div>
       </nav>
-      <div class="sidebar">
-        <img src="src/img/Logo-Eysa.png" class="Logo">
+      <div class="sidebar sidebar-active">
+        <img src="src/img/Logo-Eysa.png"
+             class="Logo">
 
-        <a href="Dashboard.html" class="sidebar-item">
+        <a href="Dashboard.html"
+           class="sidebar-item">
           <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
 
-        <a href="CctvList.html" class="sidebar-item">
+        <a href="CctvList.html"
+           class="sidebar-item">
           <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
 
-        <a href="#" class="sidebar-item selected">
+        <a href="#"
+           class="sidebar-item selected">
           <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
 
-        <a href="Infracoes.html" class="sidebar-item">
+        <a href="Infracoes.html"
+           class="sidebar-item">
           <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
 
-        <a href="Veiculos.html" class="sidebar-item">
+        <a href="Veiculos.html"
+           class="sidebar-item">
           <i class="fa-solid fa-car px-2"></i>Veiculos</a>
 
-        <a href="Fluxo.html" class="sidebar-item">
+        <a href="Fluxo.html"
+           class="sidebar-item">
           <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
       </div>
 
-      <div class="dark-section">
-        <i class="fa-solid fa-chevron-left" style="color: white;"></i>
+      <div class="dark-section dark-section-active">
+        <i class="fa-solid fa-chevron-left"
+           style="color: white;"></i>
       </div>
     </div>
 
     <div class="table-responsive">
-      <h2>Usuários<a href="cadastro.html" class="mx-2"><button class="btn btn-primary btn-create2"><i
-              class="fa-solid fa-user-plus px-1"></i>Criar Novo</button></a></h2>
+      <h2>Usuários<a href="cadastro.html"
+           class="mx-2"><button class="btn btn-primary btn-create2"><i class="fa-solid fa-user-plus px-1"></i>Criar Novo</button></a></h2>
       <p>Obs: Caso queira ver mais detalhes, clique no menu ao final da tabela (<i class="fa-solid fa-ellipsis-vertical"
-          style="color: black;"></i>)</p>
+           style="color: black;"></i>)</p>
 
       <div class="px-2 pt-2 pb-2 d-flex align-items-center flex-wrap gap">
         <div class="d-flex align-items-center filter">
@@ -192,7 +189,8 @@
         </div>
         <div class="d-grid align-items-center m-0">
           <span><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> Buscar:</span>
-          <input type="text" placeholder="Digite aqui">
+          <input type="text"
+                 placeholder="Digite aqui">
           <select class="mr-3">
             <option>ID</option>
             <option>Nome</option>
@@ -206,7 +204,8 @@
         <thead class="table-header">
           <tr>
             <th class="table-header-cell placa"><strong>ID</strong></th>
-            <th id="thPlaca" class="table-header-cell placa"><strong>Nome</strong></th>
+            <th id="thPlaca"
+                class="table-header-cell placa"><strong>Nome</strong></th>
             <th class="table-header-cell placa "><strong>Grupo</strong></th>
             <th class="table-header-cell placa marca"><strong>Email</strong></th>
             <th></th>
@@ -219,21 +218,24 @@
             <td>Admin</td>
             <td>Administrador</td>
             <td class="marca">adm@gmail.com</td>
-            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"
+                   style="color: black;"></i></a></td>
           </tr>
           <tr>
             <td>2</td>
             <td>João</td>
             <td>Monitor</td>
             <td class="marca">joao@gmail.com</td>
-            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"
+                   style="color: black;"></i></a></td>
           </tr>
           <tr>
             <td>3</td>
             <td>Carlos</td>
             <td>Segurança</td>
             <td class="marca">carlos@gmail.com</td>
-            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"
+                   style="color: black;"></i></a></td>
           </tr>
           <tr>
             <td>4</td>
@@ -241,7 +243,8 @@
             <td>Monitor</td>
             <td class="marca">chico@gmail.com</td>
 
-            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: black;"></i></a></td>
+            <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"
+                   style="color: black;"></i></a></td>
           </tr>
         </tbody>
       </table>
@@ -249,5 +252,6 @@
 
   </div>
 </body>
+<script src="./src/navBarScript.js"></script>
 
 </html>

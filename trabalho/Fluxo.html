@@ -3,47 +3,46 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
   <title>FreeFlow</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="icon" href="caminho/para/o/icone.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="caminho/para/o/icone.ico" type="image/x-icon">
-  <link rel="stylesheet" href="src/style.css">
-  <link rel="stylesheet" href="src/fluxoStyle.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon"
+        href="caminho/para/o/icone.ico"
+        type="image/x-icon">
+  <link rel="shortcut icon"
+        href="caminho/para/o/icone.ico"
+        type="image/x-icon">
+  <link rel="stylesheet"
+        href="src/style.css">
+  <link rel="stylesheet"
+        href="src/fluxoStyle.css" />
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+  <script src="https://kit.fontawesome.com/11541df052.js"
+          crossorigin="anonymous"></script>
 
   <style>
-
     @media (max-width: 768px) {
       .navbar {
-    display: flex;
-    align-items: center;
-    box-sizing: content-box;
-  }
-
-  .iconebar {
-    margin-right: auto;
-  }
-
-  .profile-info {
-    margin-left: auto;
-  }
-
-  .bg-light{
-    margin-left: 0px;
-  }
-    }
-
-    @media (min-width: 769px) {
-      .iconebar {
-        display: none;
+        display: flex;
+        align-items: center;
+        box-sizing: content-box;
       }
 
+      .profile-info {
+        margin-left: auto;
+      }
+
+      .bg-light {
+        margin-left: 0px;
+      }
     }
   </style>
 </head>
@@ -60,38 +59,49 @@
             <a href="login.html"><span class="profile-name">Login</span></a>
           </div>
         </nav>
-        <div class="sidebar">
-          <img src="src/img/Logo-Eysa.png" class="Logo">
+        <div class="sidebar sidebar-active">
+          <img src="src/img/Logo-Eysa.png"
+               class="Logo">
 
-          <a href="Dashboard.html" class="sidebar-item">
+          <a href="Dashboard.html"
+             class="sidebar-item">
             <i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
 
-          <a href="CctvList.html" class="sidebar-item">
+          <a href="CctvList.html"
+             class="sidebar-item">
             <i class="fa-solid fa-tv px-2"></i>CCTV List</a>
 
-          <a href="index.html" class="sidebar-item">
+          <a href="index.html"
+             class="sidebar-item">
             <i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
 
-          <a href="Infracoes.html" class="sidebar-item">
+          <a href="Infracoes.html"
+             class="sidebar-item">
             <i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
 
-          <a href="Veiculos.html" class="sidebar-item">
+          <a href="Veiculos.html"
+             class="sidebar-item">
             <i class="fa-solid fa-car px-2"></i>Veiculos</a>
 
-          <a href="#" class="sidebar-item selected">
+          <a href="#"
+             class="sidebar-item selected">
             <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
         </div>
 
-        <div class="dark-section">
-          <i class="fa-solid fa-chevron-left" style="color: white;"></i>
+        <div class="dark-section dark-section-active">
+          <i class="fa-solid fa-chevron-left"
+             style="color: white;"></i>
         </div>
       </div>
-      <div id="main-container" class="col-8 main-container">
+      <div id="main-container"
+           class="col-8 main-container">
         <h2>BR-101 (Rio Santos)</h2>
         <div class="row">
           <div class="">
             <figure class="figure">
-              <img src="./src/img/grafico.jpeg" class="img-fluid rounded" alt="Gráfico de Chamados" />
+              <img src="./src/img/grafico.jpeg"
+                   class="img-fluid rounded"
+                   alt="Gráfico de Chamados" />
             </figure>
           </div>
           <div class="col-lg-5">
@@ -110,7 +120,8 @@
       </div>
     </div>
   </div>
+  <script src="./src/fluxoScript.js"></script>
+  <script src="./src/navBarScript.js"></script>
 </body>
-<script src="./src/fluxoScript.js"></script>
 
 </html>
