@@ -21,6 +21,7 @@
     .table-responsive {
       margin-left: 200px;
       width: auto;
+      padding: 0px 42px;
     }
 
     select {
@@ -33,29 +34,34 @@
     }
 
     .gap {
-      gap:10px;
+      gap: 10px;
     }
 
     .filter {
       margin-left: 2%;
     }
 
-    h2{
+    h2 {
       margin-left: 2%;
     }
-    p{
+
+    p {
       margin-left: 2%;
+    }
+
+    .table {
+      background-color: #fff;
     }
 
 
     @media (max-width: 768px) {
-      .sidebar {
+      /* .sidebar {
         display: none;
       }
 
       .dark-section {
         display: none;
-      }
+      } */
 
       .bg-light {
         margin-left: 0;
@@ -66,7 +72,7 @@
       }
 
       .navbar {
-        width: 90%;
+        width: 100%;
         left: 0;
       }
 
@@ -77,12 +83,6 @@
 
       .row {
         margin-right: -25px;
-      }
-
-      *,
-      ::after,
-      ::before {
-        box-sizing: content-box;
       }
 
       .ordbox {
@@ -97,36 +97,30 @@
         margin-left: 0px;
       }
 
-      .aplicar{
+      .aplicar {
         margin-top: 15px;
       }
-      
+
     }
+
     @media (max-width: 867px) {
       .marca {
         display: none;
       }
 
-      .table > *  {
+      .table>* {
         font-size: 14px;
-      
+
         th {
           padding: 10px;
         }
-        
+
         td {
           padding: 10px;
         }
 
       }
 
-      
-    }
-
-    @media (min-width: 769px) {
-      .iconebar {
-        display: none;
-      }
 
     }
   </style>
@@ -144,7 +138,7 @@
           <a href="login.html"><span class="profile-name">Login</span></a>
         </div>
       </nav>
-      <div class="sidebar">
+      <div class="sidebar sidebar-active">
         <img src="src/img/Logo-Eysa.png"
              class="Logo">
 
@@ -173,7 +167,7 @@
           <i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
       </div>
 
-      <div class="dark-section">
+      <div class="dark-section dark-section-active">
         <i class="fa-solid fa-chevron-left"
            style="color: white;"></i>
       </div>
@@ -216,7 +210,8 @@
         <thead class="table-header">
           <tr>
             <th class="table-header-cell placa"><strong>ID</strong></th>
-            <th id="thPlaca" class="table-header-cell placa"><strong>Placa do veiculo</strong></th>
+            <th id="thPlaca"
+                class="table-header-cell placa"><strong>Placa do veiculo</strong></th>
             <th class="table-header-cell placa marca"><strong>Marca / Modelo</strong></th>
             <th class="table-header-cell placa"><strong>Data da passagem</strong></th>
             <th id="imagenCap"
@@ -280,7 +275,7 @@
     var thImagenCap = document.querySelectorAll('#imagenCap');
     var viewPicture = document.querySelectorAll('.viewPicture');
     var thPlaca = document.querySelectorAll('#thPlaca');
-    
+
     viewPicture.forEach(function (container) {
       if (windowWidth < 1140) {
         container.innerHTML = '<i class="fa-regular fa-images px-2"></i>'
@@ -308,5 +303,6 @@
   obtenerAnchoPantalla();
 
 </script>
+<script src="./src/navBarScript.js"></script>
 
 </html>

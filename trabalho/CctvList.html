@@ -3,16 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
   <title>CCTV List</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="src/style.css">
-  <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet"
+        href="src/style.css">
+  <script src="https://kit.fontawesome.com/11541df052.js"
+          crossorigin="anonymous"></script>
 
   <style>
     .table-responsive {
-      margin-left: 220px; 
+      margin-left: 200px;
       width: auto;
+      padding: 0px 42px;
     }
 
     .status-icon {
@@ -41,7 +46,11 @@
       margin-bottom: 20px;
     }
 
-    @media (max-width: 992px) {
+    .table {
+      background-color: #fff;
+    }
+
+    @media (max-width: 768px) {
       .table-responsive {
         margin-left: 0;
       }
@@ -55,24 +64,32 @@
     <div>
       <nav class="navbar navbar-light bg-light">
         <i class="fa-solid fa-bars iconebar"></i>
-        <span class="navbar-brand mb-0 h1 ml-3">CCTV List</span> 
+        <span class="navbar-brand mb-0 h1 ml-3">CCTV List</span>
         <div class="profile-info">
           <div class="profile-picture"></div>
           <a href="login.html"><span class="profile-name">Login</span></a>
         </div>
       </nav>
-      <div class="sidebar">
-        <img src="src/img/Logo-Eysa.png" class="Logo">
-        <a href="Dashboard.html" class="sidebar-item"><i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
-        <a href="CctvList.html" class="sidebar-item selected"><i class="fa-solid fa-tv px-2"></i>CCTV List</a>
-        <a href="index.html" class="sidebar-item"><i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
-        <a href="Infracoes.html" class="sidebar-item"><i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
-        <a href="Veiculos.html" class="sidebar-item"><i class="fa-solid fa-car px-2"></i>Veiculos</a>
-        <a href="Fluxo.html" class="sidebar-item"><i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
+      <div class="sidebar sidebar-active">
+        <img src="src/img/Logo-Eysa.png"
+             class="Logo">
+        <a href="Dashboard.html"
+           class="sidebar-item"><i class="fa-solid fa-table-columns px-2"></i>Dashboard</a>
+        <a href="CctvList.html"
+           class="sidebar-item selected"><i class="fa-solid fa-tv px-2"></i>CCTV List</a>
+        <a href="index.html"
+           class="sidebar-item"><i class="fa-solid fa-id-card-clip px-2"></i>Admin Manager</a>
+        <a href="Infracoes.html"
+           class="sidebar-item"><i class="fa-solid fa-file-invoice px-2"></i>Infrações</a>
+        <a href="Veiculos.html"
+           class="sidebar-item"><i class="fa-solid fa-car px-2"></i>Veiculos</a>
+        <a href="Fluxo.html"
+           class="sidebar-item"><i class="fa-solid fa-chart-simple px-2"></i>Dados do fluxo</a>
       </div>
 
-      <div class="dark-section">
-        <i class="fa-solid fa-chevron-left" style="color: white;"></i>
+      <div class="dark-section dark-section-active">
+        <i class="fa-solid fa-chevron-left"
+           style="color: white;"></i>
       </div>
     </div>
 
@@ -83,19 +100,19 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Número de Câmeras</h5>
-            <p class="card-text">20 <i class="fas fa-video status-icon"></i></p> 
+            <p class="card-text">20 <i class="fas fa-video status-icon"></i></p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Câmeras Ativas</h5>
-            <p class="card-text">15 <i class="fas fa-check-circle status-icon active"></i></p> 
+            <p class="card-text">18 <i class="fas fa-check-circle status-icon active"></i></p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Câmeras Inativas</h5>
-            <p class="card-text">5 <i class="fas fa-times-circle status-icon inactive"></i></p> 
+            <p class="card-text">2 <i class="fas fa-times-circle status-icon inactive"></i></p>
           </div>
         </div>
       </div>
@@ -123,7 +140,7 @@
             <td>2</td>
             <td>Câmera 2</td>
             <td>Grupo B</td>
-            <td><i class="fas fa-times-circle status-icon inactive"></i></td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
             <td><i class="fas fa-ellipsis-vertical"></i></td>
           </tr>
           <tr>
@@ -140,10 +157,124 @@
             <td><i class="fas fa-times-circle status-icon inactive"></i></td>
             <td><i class="fas fa-ellipsis-vertical"></i></td>
           </tr>
+          <tr>
+            <td>5</td>
+            <td>Câmera 5</td>
+            <td>Grupo A</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Câmera 6</td>
+            <td>Grupo B</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Câmera 7</td>
+            <td>Grupo A</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Câmera 8</td>
+            <td>Grupo C</td>
+            <td><i class="fas fa-times-circle status-icon inactive"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Câmera 9</td>
+            <td>Grupo A</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Câmera 10</td>
+            <td>Grupo B</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Câmera 11</td>
+            <td>Grupo A</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Câmera 12</td>
+            <td>Grupo C</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Câmera 13</td>
+            <td>Grupo A</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>Câmera 14</td>
+            <td>Grupo B</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>Câmera 15</td>
+            <td>Grupo A</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>Câmera 16</td>
+            <td>Grupo C</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>Câmera 17</td>
+            <td>Grupo A</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>Câmera 18</td>
+            <td>Grupo B</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>Câmera 19</td>
+            <td>Grupo A</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>Câmera 20</td>
+            <td>Grupo C</td>
+            <td><i class="fas fa-check-circle status-icon active"></i></td>
+            <td><i class="fas fa-ellipsis-vertical"></i></td>
+          </tr>
         </tbody>
+
       </table>
     </div>
   </div>
+  <script src="./src/navBarScript.js"></script>
 </body>
 
 </html>

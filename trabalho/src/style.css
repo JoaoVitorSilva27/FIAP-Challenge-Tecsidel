@@ -4,29 +4,37 @@
   font-style: normal;
 }
 
-
 body {
-    background-color: #F5F5F5;
-  }
-  .sidebar {
-  background-color: #2F323A;
+  background-color: #f0f2f5;
+}
+.sidebar {
+  background-color: #2f323a;
   height: 100vh;
   width: 200px;
   position: fixed;
   top: 0;
-  left: 0;
+  /* left: 0; */
   z-index: 1030;
-  }
+  transition: all 0.3s ease-out;
+}
 
-  .sidebar-nav-link {
+.sidebar-active {
+  left: 0px;
+}
+
+.sidebar-inactive {
+  left: -200px;
+}
+
+.sidebar-nav-link {
   color: #ffffff;
-  }
+}
 
-  .active-sidebar-nav-link {
-  background-color: #56A4FF;
-  }
+.active-sidebar-nav-link {
+  background-color: #56a4ff;
+}
 
-  .navbar {
+.navbar {
   position: fixed;
   top: 0;
   left: 185px;
@@ -35,123 +43,132 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  }
+  transition: all 0.3s ease-out;
+}
 
-  .Logo{
-    padding: 10px;
-    width: 100%;
-    margin: 25px 0;
-  }
+.Logo {
+  padding: 10px;
+  width: 100%;
+  margin: 25px 0;
+}
 
-  .btn-create {
+.btn-create {
   width: 109px;
   height: 39px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0.5rem;
   text-decoration: none;
-  background-color: #56a4FF;
-  border: 1px solid #56A4FF;
+  background-color: #56a4ff;
+  border: 1px solid #56a4ff;
   border-radius: 5px;
-  }
+}
 
-  .btn-create2 {
-    width: 150px;
-    height: 39px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5rem;
-    text-decoration: none;
-    background-color: #56a4FF;
-    border: 1px solid #56A4FF;
-    border-radius: 5px;
-    }
+.btn-create2 {
+  width: 150px;
+  height: 39px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  background-color: #56a4ff;
+  border: 1px solid #56a4ff;
+  border-radius: 5px;
+}
 
-  .navbar-brand {
+.navbar-brand {
   margin-left: 15px;
-  }
+}
 
-  .navbar-brand + span {
+.navbar-brand + span {
   margin-right: 15px;
-  }
-  .dark-section {
-  background-color: #22242A;
+}
+.dark-section {
+  background-color: #22242a;
   height: 48px;
   width: 200px;
   position: fixed;
   bottom: 0;
-  left: 0;
   z-index: 1030;
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+  transition: all 0.3s ease-out;
+}
 
-  .dark-section svg{
+.dark-section-active {
+  left: 0px;
+}
+
+.dark-section-inactive {
+  left: -200px;
+}
+
+.dark-section svg {
   height: 16px;
   width: 16px;
-  }
+}
 
-  .content {
-    padding-top: 80px;
-  }
-  .table-header {
-    background-color: #FAFAFA;
-    padding: 1.50rem;
-  }
-  .bg-light{
-      margin-left: 15px;
-  }
+.content {
+  padding-top: 80px;
+}
+.table-header {
+  background-color: #fafafa;
+  padding: 1.5rem;
+}
+.bg-light {
+  margin-left: 15px;
+}
 
-  h2{
-    margin-top: 70px;
-  }
-  .span{
-      margin-right: 300px;
-  }
+h2 {
+  margin-top: 70px;
+}
+.span {
+  margin-right: 300px;
+}
 
-  .table td, .table th {
-  padding: 1.50rem;
+.table td,
+.table th {
+  padding: 1.5rem;
   border-top: 1px solid #000000;
   margin-right: 50px;
-  }
-  .table{
+}
+.table {
   width: 100%;
   margin-top: 20px;
   border-spacing: 0 20px;
-  }
+}
 
-  .table svg {
-    width: 16px;
-    height: 16px;
-    fill: #000000;
-  }
-  .table-header th{
-      margin-right: 20px;
-      padding: 1rem 1rem;
-      text-align: center;
-  }
-  .table td {
-    padding: 20px;
-    text-align: center;
-  }
+.table svg {
+  width: 16px;
+  height: 16px;
+  fill: #000000;
+}
+.table-header th {
+  margin-right: 20px;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+.table td {
+  padding: 20px;
+  text-align: center;
+}
 
-  .sidebar-item {
-    padding: 10px;
-    color: white;
-    text-decoration: none !important;
-    display: block;
-  }
+.sidebar-item {
+  padding: 10px;
+  color: white;
+  text-decoration: none !important;
+  display: block;
+}
 
-  .sidebar-item.selected {
-    background-color: #56A4FF;
-    color: white;
-  }
+.sidebar-item.selected {
+  background-color: #56a4ff;
+  color: white;
+}
 
-  .profile-info {
+.profile-info {
   display: flex;
   align-items: center;
-  margin-right: 100px;
 }
 
 .profile-picture {
@@ -167,16 +184,19 @@ body {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 768px) {
-  .sidebar {
+.navbar {
+  & .iconebar {
+    margin-right: 15px;
     display: none;
   }
-  .dark-section {
-    display: none;
-  }
+}
 
+@media only screen and (max-width: 768px) {
   .navbar {
     left: 0px;
-    width: 100%
+    width: 100%;
+    & .iconebar {
+      display: unset;
+    }
   }
 }
