@@ -13,7 +13,6 @@ body {
   width: 200px;
   position: fixed;
   top: 0;
-  /* left: 0; */
   z-index: 1030;
   transition: all 0.3s ease-out;
 }
@@ -169,6 +168,7 @@ h2 {
 .profile-info {
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
 .profile-picture {
@@ -203,8 +203,8 @@ h2 {
 
 .alert-menu {
   position: absolute;
-  top: 50px; /* Ajuste conforme necessário */
-  right: 100px; /* Ajuste conforme necessário */
+  top: 50px;
+  right: 100px;
   background-color: white;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
