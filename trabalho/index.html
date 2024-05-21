@@ -117,8 +117,14 @@
     <div>
       <nav class="navbar navbar-light bg-light">
         <i class="fa-solid fa-bars iconebar" onclick="toggleNavBar()"></i>
-        <span class="navbar-brand mb-0 h1">Admin manager</span>
+        <span class="navbar-brand mb-0 h1">Admin Manager</span>
         <div class="profile-info">
+          <div class="alert-arrow"></div>
+          <i class="fa-regular fa-bell fa-xl mr-4" role="button" onclick="alerta()"></i>
+          <div class="alert-menu" id="alertMenu" style="display: none;">
+            <div id="alertList"></div>
+          </div>
+        
           <div class="profile-picture"></div>
           <a href="login.html"><span class="profile-name">Login</span></a>
         </div>
@@ -272,6 +278,9 @@
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
 <script src="./src/alertScript.js"></script>
+
+<script src="src/listaAlerta.js"></script>
+<script src="./src/scriptAlerta.js"></script>
 <script src="./src/navBarScript.js"></script>
 
 </html>
