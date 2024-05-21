@@ -21,3 +21,20 @@ function alerta() {
       alertArrow.style.display = "block";
   }
 }
+
+window.onclick = function(event) {
+  if (!event.target.matches('.fa-bell')) {
+    var alertMenus = document.getElementsByClassName("alert-menu");
+    for (var i = 0; i < alertMenus.length; i++) {
+      var openAlertMenu = alertMenus[i];
+      if (openAlertMenu.style.display === "block") {
+        openAlertMenu.style.display = "none";
+
+        var alertArrow = document.querySelector(".alert-arrow");
+        if (alertArrow.style.display === "block") {
+          alertArrow.style.display = "none";
+        }
+      }
+    }
+  }
+}
