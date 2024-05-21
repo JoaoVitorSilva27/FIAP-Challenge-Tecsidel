@@ -13,7 +13,6 @@ body {
   width: 200px;
   position: fixed;
   top: 0;
-  /* left: 0; */
   z-index: 1030;
   transition: all 0.3s ease-out;
 }
@@ -169,6 +168,7 @@ h2 {
 .profile-info {
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
 .profile-picture {

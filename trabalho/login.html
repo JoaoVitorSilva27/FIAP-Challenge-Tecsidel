@@ -1,124 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreeFlow</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>FreeFlow</title>
 
-    <link rel="stylesheet" href="src/style.css">
-    <script src="https://kit.fontawesome.com/11541df052.js" crossorigin="anonymous"></script>
-    <style>
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Nav */
-        nav {
-            background-color: #fff;
-            color: black;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style-type: none;
-        }
-
-        nav li {
-            display: inline;
-        }
-
-        /* Posicionamento para os itens de menu */
-        nav li.cctv-list {
-            float: left;
-            margin-right: 20px;
-        }
-
-        nav li.user {
-            float: right;
-            margin-left: 20px;
-        }
-
-        /* Login */
-        .login-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: left;
-            width: 90%;
-            max-width: 400px;
-            padding: 30px;
-        }
-
-        .login-container h2 {
-            font-size: 30px;
-            margin-bottom: 50px;
-        }
-
-        .input-container {
-            margin-bottom: 20px;
-        }
-
-        .input-container input {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: black solid 2px;
-        }
-
-        .login-container button {
-            width: 100%;
-            padding: 15px;
-            background-color: black;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        @media screen and (max-width: 768px) {
-            .login-container {
-                width: 95%;
-                max-width: 90%;
+        <link rel="stylesheet"
+            href="src/style.css">
+        <script src="https://kit.fontawesome.com/11541df052.js"
+                crossorigin="anonymous"></script>
+        <style>
+            /* Reset CSS */
+            * {
+                margin: 0;
+                padding: 0;
             }
-        }
-    </style>
-</head>
 
-<body>
-    <nav>
-        <ul> 
-            <li class="cctv-list">Login</li>
-            <li class="user"> <a href="Dashboard.html"><i class="fa-solid fa-house-chimney"></i> Voltar ao inicio</a></li>
-        </ul>
-    </nav>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                padding: 0;
+            }
 
-    <div class="login-container">
-        <h2>Login</h2>
-        <div class="input-container">
-            <input type="text" placeholder="Username">
+            /* Nav */
+            nav {
+                background-color: #fff;
+                color: black;
+                padding: 10px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+
+            nav ul {
+                list-style-type: none;
+            }
+
+            nav li {
+                display: inline;
+            }
+
+            /* Posicionamento para os itens de menu */
+            nav li.cctv-list {
+                float: left;
+                margin-right: 20px;
+            }
+
+            nav li.user {
+                float: right;
+                margin-left: 20px;
+            }
+
+            /* Login */
+            .login-container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: left;
+                width: 90%;
+                max-width: 400px;
+                padding: 30px;
+            }
+
+            .login-container h2 {
+                font-size: 30px;
+                margin-bottom: 50px;
+            }
+
+            .input-container {
+                margin-bottom: 20px;
+            }
+
+            .input-container input {
+                width: 100%;
+                padding: 15px;
+                margin-bottom: 15px;
+                border: black solid 2px;
+            }
+
+            .login-container button {
+                width: 100%;
+                padding: 15px;
+                background-color: black;
+                color: #fff;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
+            @media screen and (max-width: 768px) {
+                .login-container {
+                    width: 95%;
+                    max-width: 90%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li class="cctv-list">Login</li>
+                <li class="user"> <a href="Dashboard.html"><i class="fa-solid fa-house-chimney"></i> Voltar ao inicio</a></li>
+            </ul>
+        </nav>
+
+        <div class="login-container">
+            <h2>Login</h2>
+            <div class="input-container">
+                <input type="text"
+                    placeholder="Username">
+            </div>
+            <div class="input-container">
+                <input type="password"
+                    placeholder="Password">
+            </div>
+            <button>Login</button>
         </div>
-        <div class="input-container">
-            <input type="password" placeholder="Password">
-        </div>
-        <button>Login</button>
-    </div>
-</body>
+    </body>
 
 </html>

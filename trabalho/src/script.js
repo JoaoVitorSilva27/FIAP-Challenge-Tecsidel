@@ -63,37 +63,42 @@ function stepsSwiper(windowWidth) {
   swiper.params.slidesPerView = Math.floor((windowWidth - 290) / 280);
 }
 
-var intervalID = setInterval(myCallback, 7000);
+function alerta() {
+  var alertMenu = document.getElementById("alertMenu");
+  var alertListContainer = document.getElementById("alertList");
+  var alertArrow = document.querySelector(".alert-arrow"); 
 
-function myCallback() {
-  let alerta = listAlertas[Math.floor(Math.random() * 10)];
-  if (alerta.gravidade == "Grave") {
-    var icon =
-      '<i class="fas fa-times-circle status-icon inactive" style="color: red; padding-right: 10px;" ></i>';
+  alertListContainer.innerHTML = '';
+
+  var alerta = listAlertas[1];
+  var alertItem = document.createElement("div");
+  alertItem.classList.add("alert-item");
+  alertItem.innerHTML = "<strong>Placa:</strong> " + alerta.placa + ", <strong>Infracao:</strong> " + alerta.infracao + ", <strong>Gravidade:</strong> " + alerta.gravidade;
+  alertListContainer.appendChild(alertItem);
+
+  if (alertMenu.style.display === "block") {
+    alertMenu.style.display = "none";
+    alertArrow.style.display = "none";
   } else {
-    var icon =
-      '<i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: orange; padding-right: 10px;"></i>';
+    alertMenu.style.display = "block";
+    alertArrow.style.display = "block";
   }
-
-  let toast = document.querySelector("#toast");
-  toast.innerHTML = `
-  <div class="toast-header">
-    ${icon}
-    <strong class="mr-auto">${alerta.infracao}</strong>
-    <button type="button"
-            class="ml-2 mb-1 close"
-            data-dismiss="toast"
-            aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="toast-body">
-    <p>Placa do veiculo: <strong>${alerta.placa}</strong></p>
-    <p><strong>${alerta.gravidade}</strong></p>
-  </div>`;
-
-  $(".toast").toast({
-    delay: 2000,
-  });
-  $(".toast").toast("show");
 }
+
+window.onclick = function(event) {
+  if (!event.target.matches('.fa-bell')) {
+    var alertMenus = document.getElementsByClassName("alert-menu");
+    for (var i = 0; i < alertMenus.length; i++) {
+      var openAlertMenu = alertMenus[i];
+      if (openAlertMenu.style.display === "block") {
+        openAlertMenu.style.display = "none";
+
+        var alertArrow = document.querySelector(".alert-arrow");
+        if (alertArrow.style.display === "block") {
+          alertArrow.style.display = "none";
+        }
+      }
+    }
+  }
+}
+
